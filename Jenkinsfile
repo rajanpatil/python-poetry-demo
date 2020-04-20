@@ -7,11 +7,6 @@ pipeline {
 	}
 
     stages {
-        stage('Initialize and Configure'){
-            steps {
-                git(branch: "${env.BRANCH_NAME}", url: "${GIT_URL}")
-            }
-        }
 
         stage('Install Dependencies') {
             steps {
