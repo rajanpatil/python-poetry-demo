@@ -1,6 +1,8 @@
 // The jenkins shared lib: https://github.com/rajanpatil/python-poetry-demo.git
-def checkCodeStyleSteps = { script ->
-    script.echo 'custom checkCodeStyleSteps from jenkinfile'
+def runTestsSteps = { script ->
+    script.sh 'poetry run pytest --html tests_report/index.html --cov=python_poetry_demo --cov-report html:coverage_report'
+    publishHTMLReport('Tests Report', 'tests_report')
+    publishHTMLReport('Code Coverage Report', 'coverage_report')
 }
 
-buildPythonService([codeStyleSteps: checkCodeStyleSteps])
+buildPythonService([testsSteps: runTestsSteps])
