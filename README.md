@@ -31,6 +31,7 @@ Run following command to run docker container locally.
 The `Jenkinsfile` doesn't use shared lib, `Jenkinsfile_simple` and `Jenkinsfile_override_steps` need shared lib configured on Jenkins.
 The [jenkins shared](https://github.com/rajanpatil/jenkins-shared-lib) lib tested with below files.
 
-- Jenkinsfile: declarative inline pipeline
-- Jenkinsfile_simple: pipeline from shared lib
-- Jenkinsfile_override_steps: override custom steps in shared lib
+- `Jenkinsfile`: declarative inline pipeline
+- `Jenkinsfile_simple`: simple pipeline from shared lib
+- `Jenkinsfile_override_steps`: override custom steps in shared lib, runTests steps are overriden.
+- `Jenkinsfile_override_steps_from_diff_libs`: override custom steps in shared lib, also use functions from different shared library. The function `publishHTMLReport` comes from different library. 
