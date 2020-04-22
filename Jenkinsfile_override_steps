@@ -1,0 +1,6 @@
+// The jenkins shared lib: https://github.com/rajanpatil/python-poetry-demo.git
+def checkCodeStyleSteps = { script ->
+    script.echo 'custom checkCodeStyleSteps from jenkinfile'
+}
+
+buildPythonService([codeStyleSteps: checkCodeStyleSteps])
