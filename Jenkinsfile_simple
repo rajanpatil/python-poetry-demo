@@ -1,2 +1,2 @@
 // The jenkins shared lib: https://github.com/rajanpatil/python-poetry-demo.git
-buildPythonService()
+buildPythonServiceSimple()
